@@ -30,17 +30,17 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hellow MGT656/660 FTW!@$# I love it ")
 }
 
-func indexHandler(w http.ResponseWriter, r *http.Request) {
+func nicknameHandler(w http.ResponseWriter, r *http.Request) {
 	// Write this clever message to w, which implements
 	// the Writer interface https://golang.org/pkg/io/#Writer
-	fmt.Fprintf(w, "Hellow MGT656/660 FTW!@$# I love it ")
+	fmt.Fprintf(w, " wild-opposum ")
 }
 
 func main() {
 	// Say that when we receive a request for the '/' (or "root") URL
 	// we want the function `indexHandler` to handle it.
 	http.HandleFunc("/", indexHandler)
-	http.HandleFunc("/nickname", indexHandler)
+	http.HandleFunc("/nickname", nicknameHandler)
 
 	// Start listening for HTTP requests.
 	port := getEnv("PORT", "8080")
