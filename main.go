@@ -44,6 +44,6 @@ func main() {
 
 	// Start listening for HTTP requests.
 	port := getEnv("PORT", "8080")
-	fmt.Printlv("Application running at http://localhost:"+port, " press Ctrl-C to quit " )
+	fmt.Println("Application running at http://localhost:"+port, " press Ctrl-C to quit " )
 	http.ListenAndServe(":"+port, nil)
 }
